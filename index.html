@@ -3,97 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Irshath Peer Mohamed | Sr. Project Engineer & Poet</title>
-    <!-- Using a more stable CSS link for better mobile loading -->
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Irshath Peer Mohamed | Sr. Project Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        /* Ensuring your name never breaks into two lines */
-        .name-header { white-space: nowrap; }
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .gold-text { color: #D4AF37; }
+        .gold-border { border-color: #D4AF37; }
+        .gold-bg { background-color: #D4AF37; }
     </style>
 </head>
 <body class="bg-black text-gray-300">
-    <!-- Navigation with Gold Border -->
-    <nav class="bg-black text-amber-500 p-4 sticky top-0 z-50 border-b border-amber-600/30">
-        <div class="max-w-6xl mx-auto flex justify-between items-center">
-            <h1 class="text-lg md:text-xl font-bold tracking-widest text-amber-500">IRSHATH PEER MOHAMED</h1>
-            <div class="hidden md:flex space-x-6 text-sm uppercase tracking-wider">
-                <a href="#about" class="hover:text-amber-400">About</a>
-                <a href="#projects" class="hover:text-amber-400">Experience</a>
-                <a href="mailto:er.irshath.md@gmail.com" class="border border-amber-500 px-4 py-1 rounded text-amber-500 hover:bg-amber-500 hover:text-black transition">Contact</a>
-            </div>
-        </div>
-    </nav>
 
     <!-- Navigation -->
-    <nav class="bg-blue-900 text-white p-4 sticky top-0 z-50 shadow-md">
+    <nav class="bg-black p-4 sticky top-0 z-50 border-b gold-border">
         <div class="max-w-6xl mx-auto flex justify-between items-center">
-            <h1 class="text-lg md:text-xl font-bold name-header">IRSHATH PEER MOHAMED</h1>
-            <div class="hidden md:flex space-x-4">
-                <a href="#about" class="hover:text-blue-300">About</a>
-                <a href="#projects" class="hover:text-blue-300">Experience</a>
-                <a href="#contact" class="bg-blue-600 px-3 py-1 rounded">Contact</a>
+            <h1 class="text-xl font-bold tracking-tight gold-text" style="font-family: 'Playfair Display', serif;">IRSHATH PEER MOHAMED</h1>
+            <div class="hidden md:flex space-x-6">
+                <a href="#about" class="hover:text-white transition">About</a>
+                <a href="#experience" class="hover:text-white transition">Experience</a>
+                <a href="mailto:er.irshath.md@gmail.com" class="gold-bg text-black px-4 py-1 rounded font-bold hover:bg-yellow-500 transition">Contact</a>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-   <header class="bg-black py-20 px-4">
-    <div class="max-w-4xl mx-auto text-center">
-        <h2 class="text-5xl font-serif text-amber-500 mb-4">Engineering & Artistry</h2>
-        <p class="text-xl text-gray-400 italic">Senior Project Engineer & Tamil Poet</p>
-    </div>
-</header>
+    <header class="bg-zinc-900 py-16 border-b border-zinc-800 px-4 text-center">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-bold gold-text mb-4" style="font-family: 'Playfair Display', serif;">Sr. Project Engineer & Poet</h2>
+            <p class="text-lg text-gray-400 tracking-wide uppercase">11 Years of Excellence in Gulf Construction & Infrastructure</p>
+        </div>
+    </header>
 
-    <!-- Main Content Container -->
-    <main class="max-w-6xl mx-auto p-4 space-y-12">
+    <main class="max-w-6xl mx-auto p-6 space-y-12">
         
         <!-- About Section -->
-        <section id="about" class="bg-white p-6 rounded-lg shadow">
-            <h3 class="text-2xl font-bold mb-4 border-b pb-2">About Me</h3>
-            <p class="text-gray-700 leading-relaxed">
-                Based in Al Karama, Dubai, I am a professional Civil Engineer specializing in high-rise residential and infrastructure projects[cite: 1]. 
-                I am also a dedicated Tamil poet and the creator of <strong>Hadi’s Broadcast</strong>[cite: 1].
+        <section id="about" class="bg-zinc-900 p-8 rounded-lg shadow-2xl border border-zinc-800">
+            <h3 class="text-2xl font-bold mb-4 gold-text border-b gold-border pb-2">Professional Summary</h3>
+            <p class="leading-relaxed mb-4">
+                Based in **Al Karama, Dubai**, I am a professional Civil Engineer specializing in large-scale infrastructure, residential, and commercial projects. 
+                With 11 years of experience in the Gulf region, I lead teams to deliver high-rise landmarks like **The Crest Grande**[cite: 2].
+            </p>
+            <p class="leading-relaxed">
+                I am also a dedicated Tamil poet and the creator of <strong>Hadi’s Broadcast</strong>, a digital platform for construction industry insights.
             </p>
         </section>
 
-        <!-- Experience Grid -->
-        <div class="bg-zinc-900 p-6 rounded-lg border border-amber-600/20 shadow-xl">
-    <h4 class="font-bold text-amber-500 text-xl">The Crest Grande</h4>
-    <p class="text-sm text-amber-600/80 mb-2 font-mono">Tower-In-Charge | 2023 - 2025</p>
-    <p class="text-gray-400">Managing a 42-level high-rise residential tower in Sobha Hartland.</p>
-</div>
+        <!-- Experience Section -->
+        <section id="experience">
+            <h3 class="text-2xl font-bold mb-6 gold-text">Professional Journey</h3>
+            <div class="space-y-6">
+                <!-- Ssangyong -->
+                <div class="bg-zinc-900 p-6 rounded-lg border-l-4 gold-border shadow-lg">
+                    <h4 class="font-bold text-lg gold-text">Senior Project Engineer</h4>
+                    <p class="text-gray-400 font-semibold text-sm">Ssangyong Engineering & Construction | 2025 - Present[cite: 2]</p>
+                    <p class="mt-2 text-sm">Coordinating execution and managing specifications for high-priority Dubai infrastructure[cite: 2].</p>
+                </div>
 
+                <!-- Sobha -->
+                <div class="bg-zinc-900 p-6 rounded-lg border-l-4 gold-border shadow-lg">
+                    <h4 class="font-bold text-lg gold-text">Project Engineer (Tower-In-Charge)</h4>
+                    <p class="text-gray-400 font-semibold text-sm">Sobha Constructions | 2023 - 2025[cite: 2]</p>
+                    <p class="text-white font-medium text-sm mt-1">Project: The Crest Grande (42-Level High-Rise)[cite: 2]</p>
+                    <p class="mt-2 text-sm">Managed the entire construction lifecycle and finishing works for a 42-level residential tower[cite: 2].</p>
+                </div>
+
+                <!-- Avola -->
+                <div class="bg-zinc-900 p-6 rounded-lg border-l-4 gold-border shadow-lg">
+                    <h4 class="font-bold text-lg gold-text">Senior Project Engineer</h4>
+                    <p class="text-gray-400 font-semibold text-sm">Avola Construction W.L.L | 2022 - 2023[cite: 2]</p>
+                    <p class="mt-2 text-sm">Supervised construction of 190+ luxury and ministry villas across multiple Bahrain projects[cite: 2].</p>
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- Footer -->
-    <footer id="contact" class="bg-gray-900 text-white py-10 mt-12 text-center">
-        <p class="font-bold">Contact Me</p>
-       <a href="mailto:er.irshath.md@gmail.com" class="text-blue-600 hover:underline font-semibold">
-    er.irshath.md@gmail.com
-</a>
-        <div class="flex justify-center space-x-6 mt-4">
-          <div class="flex justify-center space-x-6 mt-4">
-    <!-- Replace the links below with your actual profile addresses -->
-    
-    <!-- Instagram Link -->
-    <a href="https://www.instagram.com/hadiis_dad?igsh=MWprdm9hbjJvam1vaA%3D%3D&utm_source=qr" target="_blank">
-        <i class="fab fa-instagram text-2xl"></i>
-<!-- LinkedIn Link: Essential for professional networking in Dubai -->
-<!-- LinkedIn Link: Essential for professional networking in Dubai -->
-<a href="https://www.linkedin.com/in/engr-irshath-mohamed-pmp-%C2%AE-887a0a150?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" class="hover:text-blue-700 transition">
-    <i class="fab fa-linkedin text-2xl"></i>
-</a>
-</a>
-    </a>
-    
-    <!-- Facebook Link -->
-    <a href="https://www.facebook.com/share/1CbZnQiPou/?mibextid=wwXIfr" target="_blank">
-        <i class="fab fa-facebook text-2xl"></i>
-    </a>
-</div>
+    <footer class="bg-black py-12 text-center border-t gold-border">
+        <h3 class="font-bold text-xl mb-4 gold-text">Connect With Me</h3>
+        <p class="mb-6"><a href="mailto:er.irshath.md@gmail.com" class="text-gray-400 hover:text-white transition underline">er.irshath.md@gmail.com</a></p>
+        <div class="flex justify-center space-x-8 mb-8 text-2xl gold-text">
+            <a href="https://www.linkedin.com/in/YOUR_LINKEDIN" target="_blank" class="hover:text-white transition"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/YOUR_INSTAGRAM" target="_blank" class="hover:text-white transition"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/YOUR_FACEBOOK" target="_blank" class="hover:text-white transition"><i class="fab fa-facebook"></i></a>
         </div>
-        <p class="text-xs text-gray-500 mt-6">&copy; 2026 Irshath Peer Mohamed[cite: 1].</p>
+        <p class="text-xs opacity-50">&copy; 2026 Irshath Peer Mohamed.</p>
     </footer>
 
 </body>
