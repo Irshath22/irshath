@@ -23,6 +23,15 @@
             background-position: center;
             background-attachment: fixed;
         }
+        .poem-card {
+            background: rgba(20, 20, 20, 0.8);
+            border: 1px solid #222;
+            transition: all 0.3s ease;
+        }
+        .poem-card:hover {
+            border-color: #D4AF37;
+            transform: translateY(-5px);
+        }
     </style>
 </head>
 <body class="bg-black text-gray-300">
@@ -62,21 +71,61 @@
             </p>
         </section>
 
-        <!-- Poetic Journey Section -->
-        <section id="poetic-journey" class="card-bg p-10 rounded-lg shadow-2xl border border-zinc-800">
-            <h3 class="text-2xl font-bold mb-6 gold-text border-b gold-border pb-2 uppercase tracking-tighter">Poetic Journey</h3>
-            <div class="grid md:grid-cols-2 gap-8 items-center">
-                <div>
-                    <p class="leading-relaxed text-lg text-gray-200 mb-4">
-                        Beyond the blueprints and steel structures, I find expression through the rhythmic beauty of the Tamil language. As an active writer and poet, I specialize in composing Tamil poetry and quotes that capture the essence of life, family, and professional dedication.
-                    </p>
-                    <p class="leading-relaxed text-lg text-gray-200">
-                        I am currently finalizing my first publication, an A5-sized Tamil poetry collection that bridges the world of a civil engineer with the soul of a literary artist. My work often explores themes centered around my son and the intricate balance between technical precision and creative freedom.
-                    </p>
-                </div>
-                <div class="border-l-2 gold-border pl-8 italic text-gray-400">
-                    <p class="mb-4">"கட்டிடங்கள் வரைபடத்தில் தொடங்கும்,<br>கவிதைகள் இதயத்தில் தொடங்கும்."</p>
-                    <p class="text-sm gold-text">— Irshath Peer Mohamed</p>
+        <!-- Poetic Journey & Quote Book Section -->
+        <section id="poetic-journey" class="space-y-10">
+            <div class="card-bg p-10 rounded-lg shadow-2xl border border-zinc-800">
+                <h3 class="text-2xl font-bold mb-6 gold-text border-b gold-border pb-2 uppercase tracking-tighter">Poetic Journey: "Meiyappu" (மெய்யாப்பு)</h3>
+                
+                <div class="grid md:grid-cols-3 gap-10">
+                    <!-- Book Info -->
+                    <div class="md:col-span-1 space-y-6">
+                        <div class="gold-border border-4 p-2 rounded-lg aspect-[3/4] flex items-center justify-center bg-zinc-900 shadow-2xl">
+                            <div class="text-center p-4">
+                                <h4 class="text-3xl font-bold text-white mb-2" style="font-family: 'Playfair Display', serif;">மெய்யாப்பு</h4>
+                                <p class="gold-text italic">"Meiyappu"</p>
+                                <div class="w-16 h-1 gold-bg mx-auto my-4"></div>
+                                <p class="text-xs uppercase tracking-widest">A Collection of Tamil Quotes & Poetry</p>
+                                <p class="text-[10px] mt-8 opacity-50">By Irshath Peer Mohamed</p>
+                            </div>
+                        </div>
+                        <a href="#" class="block text-center gold-bg text-black font-bold py-3 rounded hover:bg-yellow-500 transition uppercase text-sm tracking-widest">View Full PDF Manuscript</a>
+                    </div>
+
+                    <!-- Selected Works from PDF -->
+                    <div class="md:col-span-2 space-y-6">
+                        <p class="leading-relaxed text-lg text-gray-200">
+                            My literary work, <strong>"Meiyappu"</strong>, is a bridge between the structural rigidity of engineering and the fluid emotion of Tamil literature. It explores the depths of identity, the struggles of the working class, and the profound bond of fatherhood.
+                        </p>
+                        
+                        <div class="grid grid-cols-1 gap-4">
+                            <!-- Poem 1 -->
+                            <div class="poem-card p-6 rounded shadow-inner">
+                                <h5 class="gold-text font-bold mb-2 uppercase text-xs tracking-widest">நானே நானாவேன் (Identity)</h5>
+                                <p class="text-gray-400 italic text-sm leading-relaxed">
+                                    "கற்ற கல்வியின் பயனையும் இன்று நுகர்கிறேன்... <br>
+                                    பெண்பலம் உலகறியுமோ?? என்பலம் ஒருநாள் உலகறியும்."
+                                </p>
+                            </div>
+
+                            <!-- Poem 2 -->
+                            <div class="poem-card p-6 rounded shadow-inner">
+                                <h5 class="gold-text font-bold mb-2 uppercase text-xs tracking-widest">செந்நீர் கவிகை (The Laborer)</h5>
+                                <p class="text-gray-400 italic text-sm leading-relaxed">
+                                    "ஆயிரம் ஆயிரம் சிலைகள் படைத்த உளிக்கு யாரும் சிலை வடிப்பதில்லை... <br>
+                                    வழிவது செந்நீரா கொழுநீரா என்றுணராத நீ."
+                                </p>
+                            </div>
+
+                            <!-- Poem 3 -->
+                            <div class="poem-card p-6 rounded shadow-inner">
+                                <h5 class="gold-text font-bold mb-2 uppercase text-xs tracking-widest">பிதாமகன் (Fatherhood)</h5>
+                                <p class="text-gray-400 italic text-sm leading-relaxed">
+                                    "நீ வைத்த அடிக்கல் எல்லாம் வைரக்கல் என்று... <br>
+                                    உன் இதயம் துடிக்கும் வரை உன் இதயம் குளிரும்."
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
