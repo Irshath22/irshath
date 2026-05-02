@@ -26,6 +26,13 @@
             background-position: center;
             background-attachment: fixed;
         }
+        .gallery-img {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .gallery-img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+        }
     </style>
 </head>
 <body class="bg-black text-gray-300">
@@ -36,6 +43,7 @@
             <h1 class="text-xl font-bold tracking-tight gold-text" style="font-family: 'Playfair Display', serif;">IRSHATH PEER MOHAMED</h1>
             <div class="hidden md:flex space-x-6 uppercase text-xs tracking-widest">
                 <a href="#about" class="hover:text-white transition">About</a>
+                <a href="#gallery" class="hover:text-white transition">Gallery</a>
                 <a href="#poetic-journey" class="hover:text-white transition">Poetic Journey</a>
                 <a href="#experience" class="hover:text-white transition">Professional Journey</a>
                 <a href="#projects" class="hover:text-white transition">Projects</a>
@@ -63,6 +71,60 @@
             <p class="leading-relaxed text-lg text-gray-200">
                 Senior Project Engineer with over a decade of hands-on experience delivering residential, commercial, and industrial landmarks across the UAE, Bahrain, and India. Expert in structural design, site supervision, and multidisciplinary team leadership, I ensure strict adherence to Gulf construction standards while optimizing project budgets and timelines. My portfolio spans from ministry housing projects in Bahrain to luxury high-rise apartments in Sobha Hartland. I am committed to leveraging advanced BIM tools and project management software to drive efficiency in modern construction.
             </p>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery">
+            <h3 class="text-3xl font-bold mb-10 gold-text text-center uppercase tracking-widest">Project Gallery</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="card-bg rounded-lg overflow-hidden border border-zinc-800 shadow-xl">
+                    <img src="https://via.placeholder.com/400x300?text=Project+1" alt="Project 1" class="gallery-img w-full h-80 object-cover">
+                    <div class="p-4">
+                        <h4 class="gold-text font-bold mb-2">The Crest Grande</h4>
+                        <p class="text-sm text-gray-400">42-Level High-Rise Apartment, Dubai</p>
+                    </div>
+                </div>
+
+                <div class="card-bg rounded-lg overflow-hidden border border-zinc-800 shadow-xl">
+                    <img src="https://via.placeholder.com/400x300?text=Project+2" alt="Project 2" class="gallery-img w-full h-80 object-cover">
+                    <div class="p-4">
+                        <h4 class="gold-text font-bold mb-2">Ministry Housing</h4>
+                        <p class="text-sm text-gray-400">Wadi al-sail Villas, Bahrain</p>
+                    </div>
+                </div>
+
+                <div class="card-bg rounded-lg overflow-hidden border border-zinc-800 shadow-xl">
+                    <img src="https://via.placeholder.com/400x300?text=Project+3" alt="Project 3" class="gallery-img w-full h-80 object-cover">
+                    <div class="p-4">
+                        <h4 class="gold-text font-bold mb-2">Al-Naseem Villas</h4>
+                        <p class="text-sm text-gray-400">Luxury Villas & Swimming Pools</p>
+                    </div>
+                </div>
+
+                <div class="card-bg rounded-lg overflow-hidden border border-zinc-800 shadow-xl">
+                    <img src="https://via.placeholder.com/400x300?text=Project+4" alt="Project 4" class="gallery-img w-full h-80 object-cover">
+                    <div class="p-4">
+                        <h4 class="gold-text font-bold mb-2">District Labour Court</h4>
+                        <p class="text-sm text-gray-400">Nagercoil, India</p>
+                    </div>
+                </div>
+
+                <div class="card-bg rounded-lg overflow-hidden border border-zinc-800 shadow-xl">
+                    <img src="https://via.placeholder.com/400x300?text=Project+5" alt="Project 5" class="gallery-img w-full h-80 object-cover">
+                    <div class="p-4">
+                        <h4 class="gold-text font-bold mb-2">RP Towers</h4>
+                        <p class="text-sm text-gray-400">G+9 Apartment Complex, Manama</p>
+                    </div>
+                </div>
+
+                <div class="card-bg rounded-lg overflow-hidden border border-zinc-800 shadow-xl">
+                    <img src="https://via.placeholder.com/400x300?text=Project+6" alt="Project 6" class="gallery-img w-full h-80 object-cover">
+                    <div class="p-4">
+                        <h4 class="gold-text font-bold mb-2">Government Projects</h4>
+                        <p class="text-sm text-gray-400">Multiple Administrative Buildings</p>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <!-- Poetic Journey Section -->
