@@ -3,100 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Irshath Peer Mohamed | Sr. Project Engineer & Poet</title>
+    <title>Irshath Peer Mohamed | Sr. Project Engineer Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;600&display=swap');
         
-        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; background-color: #000; color: #d1d1d1; }
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
         .gold-text { color: #D4AF37; }
         .gold-border { border-color: #D4AF37; }
         .gold-bg { background-color: #D4AF37; }
         .card-bg { background-color: #0a0a0a; }
         
         /* Book Cover Styling */
-        .book-preview-container { perspective: 1000px; }
-        .book-cover-art {
-            width: 280px;
-            height: 400px;
+        .book-cover {
             background: linear-gradient(135deg, #1a1a1a 0%, #000 100%);
             border: 2px solid #D4AF37;
-            border-left-width: 15px;
-            box-shadow: 15px 15px 30px rgba(0,0,0,0.8);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-            transition: transform 0.5s ease;
-            cursor: pointer;
+            box-shadow: 0 25px 50px -12px rgba(212, 175, 55, 0.25);
+            position: relative;
+            overflow: hidden;
         }
-        .book-cover-art:hover { transform: rotateY(-10deg); }
+        .book-cover::after {
+            content: "";
+            position: absolute;
+            top: 0; left: 10px; width: 2px; height: 100%;
+            background: rgba(255,255,255,0.1);
+        }
 
-        /* Manuscript Reader Modal */
+        /* Full Screen Manuscript Modal */
         #manuscriptModal {
             display: none;
             position: fixed;
             inset: 0;
-            z-index: 9999;
+            z-index: 1000;
             background: #000;
             overflow-y: auto;
         }
+
         .manuscript-page {
             max-width: 800px;
-            margin: 50px auto;
-            background: #fdfdfd;
+            margin: 40px auto;
+            background: #fff;
             color: #1a1a1a;
-            padding: 80px;
-            box-shadow: 0 0 50px rgba(212, 175, 55, 0.2);
-            font-family: 'Georgia', serif;
+            padding: 60px;
+            box-shadow: 0 0 30px rgba(212, 175, 55, 0.3);
             min-height: 1000px;
+            font-family: 'Georgia', serif;
         }
+
+        .poem-card {
+            border: 1px solid #222;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .poem-card:hover { border-color: #D4AF37; background: #111; }
     </style>
 </head>
-<body>
+<body class="bg-black text-gray-300">
 
-    <!-- MANUSCRIPT MODAL READER -->
+    <!-- FULL MANUSCRIPT MODAL -->
     <div id="manuscriptModal">
         <div class="sticky top-0 bg-zinc-900 p-4 border-b gold-border flex justify-between items-center px-10">
-            <h2 class="gold-text font-bold uppercase tracking-widest text-sm">Meiyappu (மெய்யாப்பு) - Full Manuscript</h2>
+            <h2 class="gold-text font-bold uppercase tracking-widest text-sm">Meiyappu - Full Manuscript</h2>
             <button onclick="closeManuscript()" class="text-white text-3xl hover:text-amber-500">&times; Close Reader</button>
         </div>
         
-        <div class="manuscript-page text-center flex flex-col justify-center items-center">
-            <h1 class="text-6xl font-bold mb-4">மெய்யாப்பு</h1>
-            <p class="text-2xl italic gold-text mb-12">Meiyappu</p>
-            <div class="w-32 h-1 bg-black mb-12"></div>
-            <p class="text-xl uppercase tracking-[0.2em]">Irshath Peer Mohamed</p>
-            <p class="mt-40 text-sm italic text-gray-500">Dubai, United Arab Emirates | 2026</p>
+        <!-- Page 1: Cover -->
+        <div class="manuscript-page flex flex-col items-center justify-center text-center">
+            <div class="border-4 border-black p-10">
+                <h1 class="text-6xl font-bold mb-4">மெய்யாப்பு</h1>
+                <p class="text-2xl italic mb-10">Meiyappu</p>
+                <div class="w-24 h-1 bg-black mx-auto mb-10"></div>
+                <p class="text-xl tracking-widest uppercase">Irshath Peer Mohamed</p>
+                <p class="mt-20 text-sm italic">"A journey through structural thoughts and poetic truths"</p>
+            </div>
         </div>
 
+        <!-- Page 2: Table of Contents & Introduction -->
         <div class="manuscript-page">
-            <h2 class="text-3xl font-bold mb-10 border-b-2 border-black pb-2">Selected Works</h2>
-            <div class="space-y-16">
-                <div>
-                    <h3 class="text-2xl font-bold mb-4">நானே நானாவேன்</h3>
-                    <p class="text-xl leading-relaxed">"காரிருள் கரைய ஊனுயிர் கலந்து கருவறை பிழந்து தரையினில் விடிந்த... பெண்பலம் உலகறியுமோ?? என்பலம் ஒருநாள் உலகறியும்."[cite: 1]</p>
-                </div>
-                <div>
-                    <h3 class="text-2xl font-bold mb-4">செந்நீர் கவிகை</h3>
-                    <p class="text-xl leading-relaxed">"ஆயிரம் ஆயிரம் சிலைகள் படைத்த உளிக்கு யாரும் சிலை வடிப்பதில்லை... வழிவது செந்நீரா கொழுநீரா என்றுணராத நீ."[cite: 1]</p>
-                </div>
-                <div>
-                    <h3 class="text-2xl font-bold mb-4">பிதாமகன்</h3>
-                    <p class="text-xl leading-relaxed">"நீ வைத்த அடிக்கல் எல்லாம் வைரக்கல் என்று இன்று ஒரு தந்தையாக அதன் மேல் நான் கட்டும் கோபுரம்... உன் இதயம் துடிக்கும் வரை உன் இதயம் குளிரும்."[cite: 1]</p>
-                </div>
+            <h2 class="text-3xl font-bold border-b-2 border-black pb-2 mb-8">பதிப்புரை (Preface)</h2>
+            <p class="text-lg leading-relaxed mb-6 italic text-gray-700">
+                This collection represents the silent dialogues of an engineer with the world. Between the blueprints and the construction sites, these quotes were born.[cite: 1]
+            </p>
+            <div class="space-y-12 mt-10">
+                <section>
+                    <h3 class="text-2xl font-bold mb-4">01. நானே நானாவேன் (Identity)</h3>
+                    <p class="text-xl leading-loose">
+                        காரிருள் கரைய ஊனுயிர் கலந்து கருவறை பிழந்து தரையினில் விடிந்த... <br>
+                        பெண்பலம் உலகறியுமோ?? என்பலம் ஒருநாள் உலகறியும்.[cite: 1]
+                    </p>
+                </section>
+                <section>
+                    <h3 class="text-2xl font-bold mb-4">02. செந்நீர் கவிகை (The Laborer)</h3>
+                    <p class="text-xl leading-loose">
+                        ஆயிரம் ஆயிரம் சிலைகள் படைத்த உளிக்கு யாரும் சிலை வடிப்பதில்லை... <br>
+                        வழிவது செந்நீரா கொழுநீரா என்றுணராத நீ.[cite: 1]
+                    </p>
+                </section>
+                <section>
+                    <h3 class="text-2xl font-bold mb-4">03. பிதாமகன் (Fatherhood)</h3>
+                    <p class="text-xl leading-loose">
+                        நீ வைத்த அடிக்கல் எல்லாம் வைரக்கல் என்று இன்று ஒரு தந்தையாக... <br>
+                        உன் இதயம் துடிக்கும் வரை உன் இதயம் குளிரும்.[cite: 1]
+                    </p>
+                </section>
             </div>
         </div>
     </div>
 
     <!-- NAVIGATION -->
-    <nav class="bg-black p-5 sticky top-0 z-50 border-b gold-border">
-        <div class="max-w-7xl mx-auto flex justify-between items-center">
-            <span class="gold-text font-bold text-xl tracking-tighter">IRSHATH PEER MOHAMED</span>
-            <div class="hidden md:flex space-x-8 text-[10px] uppercase tracking-widest font-bold">
-                <a href="#about" class="hover:text-white transition">About</a>
+    <nav class="bg-black p-4 sticky top-0 z-50 border-b gold-border">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <h1 class="text-xl font-bold tracking-tighter gold-text" style="font-family: 'Playfair Display', serif;">IRSHATH PEER MOHAMED</h1>
+            <div class="hidden md:flex space-x-8 uppercase text-[10px] tracking-widest font-semibold">
                 <a href="#poetic-journey" class="hover:text-white transition">Poetic Journey</a>
                 <a href="#experience" class="hover:text-white transition">Professional Journey</a>
                 <a href="#projects" class="hover:text-white transition">Projects</a>
@@ -105,134 +124,144 @@
         </div>
     </nav>
 
-    <main class="max-w-6xl mx-auto p-6 space-y-20">
-
-        <!-- ABOUT SECTION -->
-        <section id="about" class="py-10">
-            <div class="card-bg p-10 rounded-lg shadow-2xl border border-zinc-800">
-                <h3 class="text-2xl font-bold mb-6 gold-text border-b gold-border pb-2 uppercase tracking-tighter">Professional Summary</h3>
-                <p class="leading-relaxed text-lg text-gray-200">
-                    Senior Project Engineer with over a decade of hands-on experience delivering residential, commercial, and industrial landmarks across the UAE, Bahrain, and India[cite: 1]. Expert in structural design, site supervision, and multidisciplinary team leadership, I ensure strict adherence to Gulf construction standards while optimizing project budgets and timelines[cite: 1]. My portfolio spans from ministry housing projects in Bahrain to luxury high-rise apartments in Sobha Hartland[cite: 1]. I am committed to leveraging advanced BIM tools and project management software to drive efficiency in modern construction[cite: 1].
-                </p>
-            </div>
-        </section>
-
-        <!-- POETIC JOURNEY SECTION -->
-        <section id="poetic-journey" class="py-10">
+    <!-- POETIC JOURNEY SECTION -->
+    <section id="poetic-journey" class="py-20 px-6">
+        <div class="max-w-6xl mx-auto">
             <h3 class="text-3xl font-bold mb-12 gold-text border-b gold-border pb-2 uppercase inline-block">Poetic Journey</h3>
+            
             <div class="grid md:grid-cols-2 gap-16 items-center">
-                <div class="book-preview-container flex justify-center">
-                    <div class="book-cover-art" onclick="openManuscript()">
+                <!-- Book Cover Preview -->
+                <div class="flex justify-center">
+                    <div class="book-cover w-72 h-[400px] flex flex-col items-center justify-center p-8 text-center cursor-pointer transform hover:scale-105 transition duration-500" onclick="openManuscript()">
                         <h4 class="text-4xl font-bold text-white mb-2" style="font-family: 'Playfair Display', serif;">மெய்யாப்பு</h4>
                         <p class="gold-text italic text-lg mb-6 tracking-widest">Meiyappu</p>
                         <div class="w-12 h-[2px] gold-bg mb-8"></div>
-                        <p class="text-[10px] uppercase tracking-[0.3em] text-gray-400">Civil Engineer's Literary Work</p>
+                        <p class="text-[10px] uppercase tracking-[0.3em] text-gray-400">Civil Engineer's <br> Literary Work</p>
                         <p class="absolute bottom-8 text-[10px] text-gray-500 uppercase">Irshath Peer Mohamed</p>
                     </div>
                 </div>
+
                 <div class="space-y-6">
                     <h4 class="text-2xl font-bold text-white">"Meiyappu" (மெய்யாப்பு)[cite: 1]</h4>
                     <p class="text-lg leading-relaxed text-gray-400">
-                        A definitive collection of Tamil quotes and poetry exploring the soul of construction and life[cite: 1]. Click the cover to open the full manuscript reader.
+                        A definitive collection of Tamil quotes and poetry that explores the intersection of structural engineering and human emotion. Click the cover or the button below to open the full manuscript reader.
                     </p>
                     <button onclick="openManuscript()" class="gold-bg text-black px-8 py-4 rounded font-bold uppercase tracking-widest hover:bg-yellow-500 transition">View Full Manuscript Quotes</button>
+                    
+                    <div class="grid grid-cols-1 gap-4 mt-8">
+                        <div class="poem-card p-4 rounded" onclick="openManuscript()">
+                            <span class="gold-text text-xs uppercase font-bold">Featured Verse:</span>
+                            <p class="italic text-sm text-gray-300 mt-1">"என் இதயம் துடிக்கும் வரை உன் இதயம் குளிரும்..."</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- PROFESSIONAL JOURNEY (FULL EXPERIENCE) -->
-        <section id="experience" class="py-10">
-            <h3 class="text-3xl font-bold mb-16 gold-text text-center uppercase tracking-widest">Professional Journey</h3>
-            <div class="space-y-12 border-l-2 gold-border pl-8">
-                <div class="relative">
-                    <div class="absolute -left-[41px] top-0 w-4 h-4 gold-bg rounded-full border-4 border-black"></div>
-                    <h4 class="text-xl font-bold gold-text">SR-PROJECT ENGINEER</h4>
-                    <p class="text-white font-semibold">SSANGYONG Engineering & Construction | 2025 - Present (Dubai, UAE)[cite: 1]</p>
-                    <ul class="mt-4 text-sm space-y-2 text-zinc-400">
-                        <li>• Coordinating with architects, contractors, and subcontractors for execution[cite: 1].</li>
-                        <li>• Monitoring project schedules and technical compliance[cite: 1].</li>
+    <!-- PROFESSIONAL JOURNEY SECTION (FULL EXPERIENCE) -->
+    <section id="experience" class="py-20 px-6 bg-zinc-950">
+        <div class="max-w-4xl mx-auto">
+            <h3 class="text-3xl font-bold mb-12 gold-text text-center uppercase tracking-[0.2em]">Professional Journey</h3>
+            
+            <div class="space-y-12 relative border-l border-zinc-800 ml-4 md:ml-0">
+                <!-- Dubai Experience -->
+                <div class="relative pl-8">
+                    <div class="absolute -left-[5px] top-0 w-3 h-3 gold-bg rounded-full"></div>
+                    <h4 class="text-xl font-bold gold-text uppercase">Sr. Project Engineer</h4>
+                    <p class="text-white font-semibold">SSANGYONG Engineering & Construction | 2025 - Present</p>
+                    <p class="text-xs text-zinc-500 mb-4 uppercase">Dubai, UAE[cite: 1]</p>
+                    <ul class="text-sm text-gray-400 space-y-2 list-disc ml-4">
+                        <li>Directing site operations and managing multidisciplinary engineering teams[cite: 1].</li>
+                        <li>Coordinating with architects and subcontractors to ensure design fidelity[cite: 1].</li>
+                        <li>Optimizing project schedules and monitoring resource allocation[cite: 1].</li>
                     </ul>
                 </div>
-                <div class="relative">
-                    <div class="absolute -left-[41px] top-0 w-4 h-4 gold-bg rounded-full border-4 border-black"></div>
-                    <h4 class="text-xl font-bold gold-text">PROJECT ENGINEER (TOWER-IN-CHARGE)</h4>
-                    <p class="text-white font-semibold">Sobha Constructions | 2023 - 2025 (Dubai, UAE)[cite: 1]</p>
-                    <p class="text-xs gold-text italic mt-1 uppercase">Project: The Crest Grande (42-Level Tower)[cite: 1]</p>
-                    <ul class="mt-4 text-sm space-y-2 text-zinc-400">
-                        <li>• Managed entire progress of a 42-level high-rise tower in Sobha Hartland[cite: 1].</li>
-                        <li>• Oversaw finishing and structural handovers[cite: 1].</li>
+
+                <div class="relative pl-8">
+                    <div class="absolute -left-[5px] top-0 w-3 h-3 gold-bg rounded-full"></div>
+                    <h4 class="text-xl font-bold gold-text uppercase">Project Engineer (Tower-in-Charge)</h4>
+                    <p class="text-white font-semibold">Sobha Constructions | 2023 - 2025</p>
+                    <p class="text-xs text-zinc-500 mb-4 uppercase italic">Project: The Crest Grande (42-Level High-Rise Tower), Dubai[cite: 1]</p>
+                    <ul class="text-sm text-gray-400 space-y-2 list-disc ml-4">
+                        <li>Managed entire work progress for a 42-level luxury residential tower in Sobha Hartland[cite: 1].</li>
+                        <li>Overseeing Finishing Division and coordinating MEP and structural handover[cite: 1].</li>
+                        <li>Ensuring strict compliance with Dubai Municipality and Civil Defense standards[cite: 1].</li>
                     </ul>
                 </div>
-                <div class="relative">
-                    <div class="absolute -left-[41px] top-0 w-4 h-4 gold-bg rounded-full border-4 border-black"></div>
-                    <h4 class="text-xl font-bold gold-text">SR-PROJECT ENGINEER</h4>
-                    <p class="text-white font-semibold">Avola Construction W.L.L | 2022 - 2023 (Bahrain)[cite: 1]</p>
+
+                <!-- Bahrain Experience -->
+                <div class="relative pl-8">
+                    <div class="absolute -left-[5px] top-0 w-3 h-3 gold-bg rounded-full"></div>
+                    <h4 class="text-xl font-bold gold-text uppercase">Sr. Project Engineer</h4>
+                    <p class="text-white font-semibold">Avola Construction W.L.L | 2022 - 2023</p>
+                    <p class="text-xs text-zinc-500 mb-4 uppercase">Manama, Bahrain[cite: 1]</p>
+                    <ul class="text-sm text-gray-400 space-y-2 list-disc ml-4">
+                        <li>Leading structural and finishing works for residential villas and commercial units[cite: 1].</li>
+                    </ul>
                 </div>
-                <div class="relative">
-                    <div class="absolute -left-[41px] top-0 w-4 h-4 gold-bg rounded-full border-4 border-black"></div>
-                    <h4 class="text-xl font-bold gold-text">PROJECT ENGINEER</h4>
-                    <p class="text-white font-semibold">Prestige Contracting | 2020 - 2022 (Bahrain)[cite: 1]</p>
+
+                <div class="relative pl-8">
+                    <div class="absolute -left-[5px] top-0 w-3 h-3 gold-bg rounded-full"></div>
+                    <h4 class="text-xl font-bold gold-text uppercase">Project Engineer</h4>
+                    <p class="text-white font-semibold">Prestige Contracting | 2020 - 2022</p>
+                    <p class="text-xs text-zinc-500 mb-4 uppercase">Bahrain[cite: 1]</p>
                 </div>
-                <div class="relative">
-                    <div class="absolute -left-[41px] top-0 w-4 h-4 gold-bg rounded-full border-4 border-black"></div>
-                    <h4 class="text-xl font-bold gold-text">SITE ENGINEER</h4>
-                    <p class="text-white font-semibold">Electromec Trading & Contracting | 2018 - 2020 (Bahrain)[cite: 1]</p>
+
+                <div class="relative pl-8">
+                    <div class="absolute -left-[5px] top-0 w-3 h-3 gold-bg rounded-full"></div>
+                    <h4 class="text-xl font-bold gold-text uppercase">Site Engineer</h4>
+                    <p class="text-white font-semibold">Electromec Trading & Contracting | 2018 - 2020</p>
+                    <p class="text-xs text-zinc-500 mb-4 uppercase">Manama, Bahrain[cite: 1]</p>
                 </div>
-                <div class="relative">
-                    <div class="absolute -left-[41px] top-0 w-4 h-4 gold-bg rounded-full border-4 border-black"></div>
-                    <h4 class="text-xl font-bold gold-text">SITE ENGINEER</h4>
-                    <p class="text-white font-semibold">CHM Constructions | 2016 - 2018 (India)[cite: 1]</p>
+
+                <!-- India Experience -->
+                <div class="relative pl-8">
+                    <div class="absolute -left-[5px] top-0 w-3 h-3 gold-bg rounded-full"></div>
+                    <h4 class="text-xl font-bold gold-text uppercase">Site Engineer</h4>
+                    <p class="text-white font-semibold">CHM Constructions | 2016 - 2018</p>
+                    <p class="text-xs text-zinc-500 mb-4 uppercase">Nagercoil, India[cite: 1]</p>
+                    <ul class="text-sm text-gray-400 space-y-2 list-disc ml-4">
+                        <li>Handling government projects including District Labour Court and Office renovations[cite: 1].</li>
+                    </ul>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- PROJECTS HANDLED (FULL LIST) -->
-        <section id="projects" class="py-10">
-            <h3 class="text-3xl font-bold mb-12 gold-text uppercase text-center">Projects Handled</h3>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="p-8 border border-zinc-900 bg-zinc-950">
-                    <h5 class="gold-text font-bold mb-4 uppercase text-xs">High-Rise (UAE)</h5>
-                    <p class="text-white font-bold">The Crest Grande</p>
-                    <p class="text-xs text-zinc-500">42-Level Residential Tower[cite: 1]</p>
+    <!-- PROJECTS HANDLED -->
+    <section id="projects" class="py-20 px-6">
+        <div class="max-w-6xl mx-auto">
+            <h3 class="text-3xl font-bold mb-10 gold-text uppercase tracking-widest">Key Project Milestones</h3>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="card-bg p-8 border border-zinc-900">
+                    <h5 class="gold-text font-bold mb-4 uppercase text-xs">High-Rise Excellence</h5>
+                    <p class="text-white text-lg mb-2">The Crest Grande</p>
+                    <p class="text-xs text-gray-500">42-Level Residential Tower, Dubai Hartland[cite: 1]</p>
                 </div>
-                <div class="p-8 border border-zinc-900 bg-zinc-950">
-                    <h5 class="gold-text font-bold mb-4 uppercase text-xs">Housing (Bahrain)</h5>
-                    <p class="text-white font-bold">Wadi Al-Sail (57 Villas)</p>
-                    <p class="text-xs text-zinc-500">Ministry of Housing[cite: 1]</p>
+                <div class="card-bg p-8 border border-zinc-900">
+                    <h5 class="gold-text font-bold mb-4 uppercase text-xs">Government Infrastructure</h5>
+                    <p class="text-white text-lg mb-2">Ministry Housing (Bahrain)</p>
+                    <p class="text-xs text-gray-500">Construction of 177+ Villas across Wadi Al-sail, Galali, and East Sitra[cite: 1]</p>
                 </div>
-                <div class="p-8 border border-zinc-900 bg-zinc-950">
-                    <h5 class="gold-text font-bold mb-4 uppercase text-xs">Housing (Bahrain)</h5>
-                    <p class="text-white font-bold">East Sitra (85 Villas)</p>
-                    <p class="text-xs text-zinc-500">Ministry of Housing[cite: 1]</p>
-                </div>
-                <div class="p-8 border border-zinc-900 bg-zinc-950">
-                    <h5 class="gold-text font-bold mb-4 uppercase text-xs">Housing (Bahrain)</h5>
-                    <p class="text-white font-bold">Galali (35 Villas)</p>
-                    <p class="text-xs text-zinc-500">Ministry of Housing[cite: 1]</p>
-                </div>
-                <div class="p-8 border border-zinc-900 bg-zinc-950">
-                    <h5 class="gold-text font-bold mb-4 uppercase text-xs">Infrastructure (Bahrain)</h5>
-                    <p class="text-white font-bold">Al-Naseem Luxury Villas</p>
-                    <p class="text-xs text-zinc-500">14 Villas & 32 Swimming Pools[cite: 1]</p>
-                </div>
-                <div class="p-8 border border-zinc-900 bg-zinc-950">
-                    <h5 class="gold-text font-bold mb-4 uppercase text-xs">Government (India)</h5>
-                    <p class="text-white font-bold">District Labour Court</p>
-                    <p class="text-xs text-zinc-500">Nagercoil, India[cite: 1]</p>
+                <div class="card-bg p-8 border border-zinc-900">
+                    <h5 class="gold-text font-bold mb-4 uppercase text-xs">Institutional Works</h5>
+                    <p class="text-white text-lg mb-2">District Labour Court</p>
+                    <p class="text-xs text-gray-500">Nagercoil, India[cite: 1]</p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-    </main>
-
-    <footer class="py-20 text-center border-t gold-border">
-        <h4 class="text-2xl font-bold gold-text" style="font-family: 'Playfair Display', serif;">Irshath Peer Mohamed</h4>
-        <p class="text-[10px] uppercase tracking-[0.5em] text-zinc-500 mt-2 mb-10">Sr. Project Engineer | Poet[cite: 1]</p>
-        <div class="flex justify-center space-x-10 text-2xl gold-text mb-12">
+    <!-- FOOTER -->
+    <footer class="bg-black py-20 text-center border-t gold-border">
+        <h3 class="text-2xl font-bold gold-text" style="font-family: 'Playfair Display', serif;">Irshath Peer Mohamed</h3>
+        <p class="text-xs uppercase tracking-[0.5em] text-zinc-600 mb-8">Sr. Project Engineer | B.E Civil</p>
+        <div class="flex justify-center space-x-8 text-xl gold-text mb-8">
             <a href="mailto:er.irshath.md@gmail.com"><i class="fas fa-envelope"></i></a>
             <a href="https://www.linkedin.com/in/irshath-peer-mohamed-b61971167/"><i class="fab fa-linkedin"></i></a>
         </div>
-        <p class="text-[10px] opacity-30 tracking-widest uppercase">&copy; 2026 Dubai, UAE</p>
+        <p class="text-[10px] text-zinc-700 uppercase tracking-widest">&copy; 2026 Dubai, United Arab Emirates</p>
     </footer>
 
     <script>
