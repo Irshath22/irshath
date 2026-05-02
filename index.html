@@ -11,24 +11,32 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600&display=swap');
-        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+
         .gold-text { color: #D4AF37; }
         .gold-border { border-color: #D4AF37; }
         .gold-bg { background-color: #D4AF37; }
         .card-bg { background-color: #0f0f0f; }
-        
+
         .hero-overlay {
             background: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.9));
         }
+
         .hero-bg {
             background-image: url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&q=80&w=2000');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
         }
+
         .gallery-img {
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
+
         .gallery-img:hover {
             transform: scale(1.05);
             box-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
@@ -37,242 +45,155 @@
 </head>
 <body class="bg-black text-gray-300">
 
-    <!-- Navigation -->
-    <nav class="bg-black p-4 sticky top-0 z-50 border-b gold-border">
-        <div class="max-w-6xl mx-auto flex justify-between items-center">
-            <h1 class="text-xl font-bold tracking-tight gold-text" style="font-family: 'Playfair Display', serif;">IRSHATH PEER MOHAMED</h1>
-            <div class="hidden md:flex space-x-6 uppercase text-xs tracking-widest">
-                <a href="#about" class="hover:text-white transition">About</a>
-                <a href="#gallery" class="hover:text-white transition">Gallery</a>
-                <a href="#poetic-journey" class="hover:text-white transition">Poetic Journey</a>
-                <a href="#experience" class="hover:text-white transition">Professional Journey</a>
-                <a href="#projects" class="hover:text-white transition">Projects</a>
-                <a href="mailto:er.irshath.md@gmail.com" class="gold-bg text-black px-4 py-1 rounded font-bold hover:bg-yellow-500 transition">Contact</a>
-            </div>
+<nav class="bg-black p-4 sticky top-0 z-50 border-b gold-border">
+    <div class="max-w-6xl mx-auto flex justify-between items-center">
+        <h1 class="text-xl font-bold tracking-tight gold-text" style="font-family: 'Playfair Display', serif;">
+            IRSHATH PEER MOHAMED
+        </h1>
+        <div class="hidden md:flex space-x-6 uppercase text-xs tracking-widest">
+            <a href="#about" class="hover:text-white transition">About</a>
+            <a href="#gallery" class="hover:text-white transition">Gallery</a>
+            <a href="#experience" class="hover:text-white transition">Professional Journey</a>
+            <a href="#projects" class="hover:text-white transition">Projects</a>
+            <a href="mailto:er.irshath.md@gmail.com"
+               class="gold-bg text-black px-4 py-1 rounded font-bold hover:bg-yellow-500 transition">
+               Contact
+            </a>
         </div>
-    </nav>
+    </div>
+</nav>
 
-    <!-- Hero Section -->
-    <header class="hero-bg border-b border-zinc-800 relative">
-        <div class="hero-overlay py-32 px-4">
-            <div class="max-w-6xl mx-auto text-center">
-                <h2 class="text-5xl md:text-7xl font-bold gold-text mb-6" style="font-family: 'Playfair Display', serif;">Engineering & Artistry</h2>
-                <p class="text-xl md:text-2xl text-gray-100 tracking-widest uppercase mb-4 font-semibold">Senior Project Engineer | Tamil Poet</p>
-                <p class="text-amber-500 font-medium italic text-lg">11 Years of Gulf Construction Excellence</p>
-            </div>
-        </div>
-    </header>
-
-    <main class="max-w-6xl mx-auto p-6 space-y-16">
-        
-        <!-- Professional Summary -->
-        <section id="about" class="card-bg p-10 rounded-lg shadow-2xl border border-zinc-800">
-            <h3 class="text-2xl font-bold mb-6 gold-text border-b gold-border pb-2 uppercase tracking-tighter">Professional Summary</h3>
-            <p class="leading-relaxed text-lg text-gray-200">
-                Senior Project Engineer with over a decade of hands-on experience delivering residential, commercial, and industrial landmarks across the UAE, Bahrain, and India. Expert in structural design, site supervision, and multidisciplinary team leadership, I ensure strict adherence to Gulf construction standards while optimizing project budgets and timelines. My portfolio spans from ministry housing projects in Bahrain to luxury high-rise apartments in Sobha Hartland. I am committed to leveraging advanced BIM tools and project management software to drive efficiency in modern construction.
+<header class="hero-bg border-b border-zinc-800 relative">
+    <div class="hero-overlay py-32 px-4">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-5xl md:text-7xl font-bold gold-text mb-6"
+                style="font-family: 'Playfair Display', serif;">
+                Engineering & Artistry
+            </h2>
+            <p class="text-xl md:text-2xl text-gray-100 tracking-widest uppercase mb-4 font-semibold">
+                Senior Project Engineer | Tamil Poet
             </p>
-        </section>
-
-        <!-- Gallery Section -->
-        <section id="gallery">
-            <h3 class="text-3xl font-bold mb-10 gold-text text-center uppercase tracking-widest">Project Gallery</h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="card-bg rounded-lg overflow-hidden border border-zinc-800 shadow-xl">
-                    <img src="https://via.placeholder.com/400x300?text=Project+1" alt="Project 1" class="gallery-img w-full h-80 object-cover">
-                    <div class="p-4">
-                        <h4 class="gold-text font-bold mb-2">The Crest Grande</h4>
-                        <p class="text-sm text-gray-400">42-Level High-Rise Apartment, Dubai</p>
-                    </div>
-                </div>
-
-                <div class="card-bg rounded-lg overflow-hidden border border-zinc-800 shadow-xl">
-                    <img src="https://via.placeholder.com/400x300?text=Project+2" alt="Project 2" class="gallery-img w-full h-80 object-cover">
-                    <div class="p-4">
-                        <h4 class="gold-text font-bold mb-2">Ministry Housing</h4>
-                        <p class="text-sm text-gray-400">Wadi al-sail Villas, Bahrain</p>
-                    </div>
-                </div>
-
-                <div class="card-bg rounded-lg overflow-hidden border border-zinc-800 shadow-xl">
-                    <img src="https://via.placeholder.com/400x300?text=Project+3" alt="Project 3" class="gallery-img w-full h-80 object-cover">
-                    <div class="p-4">
-                        <h4 class="gold-text font-bold mb-2">Al-Naseem Villas</h4>
-                        <p class="text-sm text-gray-400">Luxury Villas & Swimming Pools</p>
-                    </div>
-                </div>
-
-                <div class="card-bg rounded-lg overflow-hidden border border-zinc-800 shadow-xl">
-                    <img src="https://via.placeholder.com/400x300?text=Project+4" alt="Project 4" class="gallery-img w-full h-80 object-cover">
-                    <div class="p-4">
-                        <h4 class="gold-text font-bold mb-2">District Labour Court</h4>
-                        <p class="text-sm text-gray-400">Nagercoil, India</p>
-                    </div>
-                </div>
-
-                <div class="card-bg rounded-lg overflow-hidden border border-zinc-800 shadow-xl">
-                    <img src="https://via.placeholder.com/400x300?text=Project+5" alt="Project 5" class="gallery-img w-full h-80 object-cover">
-                    <div class="p-4">
-                        <h4 class="gold-text font-bold mb-2">RP Towers</h4>
-                        <p class="text-sm text-gray-400">G+9 Apartment Complex, Manama</p>
-                    </div>
-                </div>
-
-                <div class="card-bg rounded-lg overflow-hidden border border-zinc-800 shadow-xl">
-                    <img src="https://via.placeholder.com/400x300?text=Project+6" alt="Project 6" class="gallery-img w-full h-80 object-cover">
-                    <div class="p-4">
-                        <h4 class="gold-text font-bold mb-2">Government Projects</h4>
-                        <p class="text-sm text-gray-400">Multiple Administrative Buildings</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Poetic Journey Section -->
-        <section id="poetic-journey" class="card-bg p-10 rounded-lg shadow-2xl border border-zinc-800">
-            <h3 class="text-2xl font-bold mb-6 gold-text border-b gold-border pb-2 uppercase tracking-tighter">Poetic Journey</h3>
-            <div class="grid md:grid-cols-2 gap-8 items-center">
-                <div>
-                    <p class="leading-relaxed text-lg text-gray-200 mb-4">
-                        Beyond the blueprints and steel structures, I find expression through the rhythmic beauty of the Tamil language. As an active writer and poet, I specialize in composing Tamil poetry and quotes that capture the essence of life, family, and professional dedication.
-                    </p>
-                    <p class="leading-relaxed text-lg text-gray-200">
-                        I am currently finalizing my first publication, an A5-sized Tamil poetry collection that bridges the world of a civil engineer with the soul of a literary artist. My work often explores themes centered around my son and the intricate balance between technical precision and creative freedom.
-                    </p>
-                </div>
-                <div class="border-l-2 gold-border pl-8 italic text-gray-400">
-                    <p class="mb-4">"கட்டிடங்கள் வரைபடத்தில் தொடங்கும்,<br>கவிதைகள் இதயத்தில் தொடங்கும்."</p>
-                    <p class="text-sm gold-text">— Irshath Peer Mohamed</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Professional Journey -->
-        <section id="experience">
-            <h3 class="text-3xl font-bold mb-10 gold-text text-center uppercase tracking-widest">Professional Journey</h3>
-            <div class="space-y-8">
-                <div class="card-bg p-8 rounded-lg border-l-4 gold-border shadow-lg">
-                    <h4 class="font-bold text-xl gold-text uppercase">SR-PROJECT ENGINEER</h4>
-                    <p class="text-gray-400 font-semibold uppercase">SSANGYONG Engineering & Construction | 2025 - Present</p>
-                    <p class="text-sm text-gray-500 mb-4 italic">Dubai, UAE</p>
-                    <ul class="text-sm space-y-2 list-disc ml-5 text-gray-400">
-                        <li>Coordinating with architects, contractors, and subcontractors for smooth execution.</li>
-                        <li>Maintaining project schedules and monitoring progress/budgets.</li>
-                    </ul>
-                </div>
-
-                <div class="card-bg p-8 rounded-lg border-l-4 gold-border shadow-lg">
-                    <h4 class="font-bold text-xl gold-text uppercase">PROJECT ENGINEER (TOWER-IN-CHARGE)</h4>
-                    <p class="text-gray-400 font-semibold uppercase">Sobha Constructions | 2023 - 2025</p>
-                    <p class="text-white font-medium text-sm mt-1 uppercase italic">The Crest Grande (42-Level High-Rise Apartment)</p>
-                    <ul class="text-sm mt-4 space-y-2 list-disc ml-5 text-gray-400">
-                        <li>Responsible for the entire work progress of the 42-level tower in Sobha Hartland-1.</li>
-                        <li>Coordinating with divisional engineers and managing finishing division works.</li>
-                    </ul>
-                </div>
-
-                <div class="card-bg p-8 rounded-lg border-l-4 gold-border shadow-lg">
-                    <h4 class="font-bold text-xl gold-text uppercase">SR-PROJECT ENGINEER</h4>
-                    <p class="text-gray-400 font-semibold uppercase">Avola Construction W.L.L | 2022 - 2023</p>
-                    <p class="text-sm text-gray-500 mb-2">Manama, Kingdom of Bahrain</p>
-                </div>
-
-                <div class="card-bg p-8 rounded-lg border-l-4 gold-border shadow-lg">
-                    <h4 class="font-bold text-xl gold-text uppercase">PROJECT ENGINEER</h4>
-                    <p class="text-gray-400 font-semibold uppercase">Prestige Contracting | 2020 - 2022</p>
-                    <p class="text-sm text-gray-500 mb-2">Jannusan, Kingdom of Bahrain</p>
-                </div>
-
-                <div class="card-bg p-8 rounded-lg border-l-4 gold-border shadow-lg">
-                    <h4 class="font-bold text-xl gold-text uppercase">SITE ENGINEER</h4>
-                    <p class="text-gray-400 font-semibold uppercase">Electromec Trading & Contracting | 2018 - 2020</p>
-                    <p class="text-sm text-gray-500 mb-2">Manama, Kingdom of Bahrain</p>
-                </div>
-
-                <div class="card-bg p-8 rounded-lg border-l-4 gold-border shadow-lg">
-                    <h4 class="font-bold text-xl gold-text uppercase">SITE ENGINEER</h4>
-                    <p class="text-gray-400 font-semibold uppercase">CHM Constructions | 2016 - 2018</p>
-                    <p class="text-sm text-gray-500 mb-2">Nagercoil, India</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Projects Handled -->
-        <section id="projects">
-            <h3 class="text-3xl font-bold mb-10 gold-text text-center uppercase tracking-widest">Projects Handled</h3>
-            <div class="grid md:grid-cols-2 gap-6">
-                <div class="card-bg p-6 rounded border border-zinc-800 shadow-xl">
-                    <h4 class="gold-text font-bold mb-3 uppercase text-xs tracking-widest">Major Residential (Bahrain)</h4>
-                    <ul class="text-[12px] space-y-2 text-gray-400">
-                        <li>• 57 villas at Wadi al-sail (Ministry of Housing)</li>
-                        <li>• 35 villas at Galali (Ministry of Housing)</li>
-                        <li>• 85 villas at East Sitra (Ministry of Housing)</li>
-                        <li>• 14 villas at Al-naseem luxury villas</li>
-                        <li>• 32 Swimming pools at Al Naseem villas</li>
-                        <li>• Tennis court at Bahrain mall</li>
-                    </ul>
-                </div>
-                <div class="card-bg p-6 rounded border border-zinc-800 shadow-xl">
-                    <h4 class="gold-text font-bold mb-3 uppercase text-xs tracking-widest">Infrastructure & High-Rise</h4>
-                    <ul class="text-[12px] space-y-2 text-gray-400">
-                        <li>• The Crest Grande (42-level high-rise), Dubai</li>
-                        <li>• District Labour Court, Nagercoil</li>
-                        <li>• District Employment Office & Magistrate Office</li>
-                        <li>• Government Higher Secondary School Renovation</li>
-                        <li>• G+9 apartment (RP Towers), Manama</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- Education -->
-        <section id="education">
-            <h3 class="text-3xl font-bold mb-8 gold-text text-center uppercase tracking-widest">Education</h3>
-            <div class="card-bg p-10 rounded-lg border gold-border text-center shadow-2xl max-w-2xl mx-auto">
-                <h4 class="font-bold text-2xl text-white uppercase mb-2">Bachelor of Civil Engineering</h4>
-                <p class="gold-text text-xl font-semibold uppercase">Anna University</p>
-                <p class="text-gray-500 text-md mt-2 italic font-medium">Class of 2012 - 2016</p>
-            </div>
-        </section>
-
-        <!-- Software Section -->
-        <section id="software">
-            <h3 class="text-3xl font-bold mb-8 gold-text text-center uppercase tracking-widest">Technical Proficiency</h3>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                <div class="card-bg p-6 rounded-lg border border-zinc-800 flex flex-col items-center justify-center hover:gold-border transition group">
-                    <i class="fas fa-drafting-compass gold-text text-2xl mb-3 group-hover:scale-110 transition"></i>
-                    <p class="gold-text font-bold text-xs uppercase tracking-widest">AutoCAD</p>
-                </div>
-                <div class="card-bg p-6 rounded-lg border border-zinc-800 flex flex-col items-center justify-center hover:gold-border transition group">
-                    <i class="fas fa-cube gold-text text-2xl mb-3 group-hover:scale-110 transition"></i>
-                    <p class="gold-text font-bold text-xs uppercase tracking-widest">Revit Architecture</p>
-                </div>
-                <div class="card-bg p-6 rounded-lg border border-zinc-800 flex flex-col items-center justify-center hover:gold-border transition group">
-                    <i class="fas fa-project-diagram gold-text text-2xl mb-3 group-hover:scale-110 transition"></i>
-                    <p class="gold-text font-bold text-xs uppercase tracking-widest">Primavera</p>
-                </div>
-                <div class="card-bg p-6 rounded-lg border border-zinc-800 flex flex-col items-center justify-center hover:gold-border transition group">
-                    <i class="fas fa-file-excel gold-text text-2xl mb-3 group-hover:scale-110 transition"></i>
-                    <p class="gold-text font-bold text-xs uppercase tracking-widest">MS-Office</p>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-black py-16 text-center border-t gold-border mt-20">
-        <h3 class="font-bold text-2xl mb-2 gold-text" style="font-family: 'Playfair Display', serif;">Irshath Peer Mohamed</h3>
-        <p class="text-xs uppercase tracking-[0.3em] text-gray-500 mb-8">Senior Project Engineer</p>
-        
-        <div class="flex justify-center space-x-10 mb-10 text-2xl gold-text">
-            <a href="mailto:er.irshath.md@gmail.com"><i class="fas fa-envelope hover:text-white transition"></i></a>
-            <a href="https://www.linkedin.com/in/irshath-peer-mohamed-b61971167/"><i class="fab fa-linkedin hover:text-white transition"></i></a>
-            <a href="https://www.facebook.com/irshathpeermohamed"><i class="fab fa-facebook hover:text-white transition"></i></a>
-            <a href="#"><i class="fab fa-instagram hover:text-white transition"></i></a>
+            <p class="text-amber-500 font-medium italic text-lg">
+                11 Years of Gulf Construction Excellence
+            </p>
         </div>
-        
-        <p class="text-[10px] uppercase tracking-widest opacity-30">&copy; 2026 | Dubai, United Arab Emirates</p>
-    </footer>
+    </div>
+</header>
+
+<main class="max-w-6xl mx-auto p-6 space-y-16">
+
+<section id="about" class="card-bg p-10 rounded-lg shadow-2xl border border-zinc-800">
+    <h3 class="text-2xl font-bold mb-6 gold-text border-b gold-border pb-2 uppercase">
+        Professional Summary
+    </h3>
+    <p class="leading-relaxed text-lg text-gray-200">
+        Senior Project Engineer with over a decade of experience delivering residential,
+        commercial, and industrial landmarks across UAE, Bahrain, and India.
+    </p>
+</section>
+
+<!-- UPDATED GALLERY SECTION -->
+<section id="gallery">
+    <h3 class="text-3xl font-bold mb-10 gold-text text-center uppercase tracking-widest">
+        Project Gallery
+    </h3>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <div class="card-bg rounded-lg overflow-hidden border border-zinc-800 shadow-xl">
+            <img src="https://via.placeholder.com/400x300?text=The+Crest+Grande"
+                 alt="The Crest Grande"
+                 class="gallery-img w-full h-80 object-cover">
+            <div class="p-4">
+                <h4 class="gold-text font-bold mb-2">The Crest Grande</h4>
+                <p class="text-sm text-gray-400">42-Level High-Rise Apartment, Dubai</p>
+            </div>
+        </div>
+
+        <div class="card-bg rounded-lg overflow-hidden border border-zinc-800 shadow-xl">
+            <img src="images/wadi-al-sail-1.jpg"
+                 alt="Wadi Al Sail Villas"
+                 class="gallery-img w-full h-80 object-cover">
+            <div class="p-4">
+                <h4 class="gold-text font-bold mb-2">Ministry Housing</h4>
+                <p class="text-sm text-gray-400">Wadi Al Sail Villas, Bahrain</p>
+            </div>
+        </div>
+
+        <div class="card-bg rounded-lg overflow-hidden border border-zinc-800 shadow-xl">
+            <img src="images/wadi-al-sail-2.jpg"
+                 alt="Wadi Al Sail Project"
+                 class="gallery-img w-full h-80 object-cover">
+            <div class="p-4">
+                <h4 class="gold-text font-bold mb-2">Wadi Al Sail Project</h4>
+                <p class="text-sm text-gray-400">57 Villas - Ministry of Housing, Bahrain</p>
+            </div>
+        </div>
+
+        <div class="card-bg rounded-lg overflow-hidden border border-zinc-800 shadow-xl">
+            <img src="https://via.placeholder.com/400x300?text=District+Labour+Court"
+                 alt="District Labour Court"
+                 class="gallery-img w-full h-80 object-cover">
+            <div class="p-4">
+                <h4 class="gold-text font-bold mb-2">District Labour Court</h4>
+                <p class="text-sm text-gray-400">Nagercoil, India</p>
+            </div>
+        </div>
+
+        <div class="card-bg rounded-lg overflow-hidden border border-zinc-800 shadow-xl">
+            <img src="https://via.placeholder.com/400x300?text=RP+Towers"
+                 alt="RP Towers"
+                 class="gallery-img w-full h-80 object-cover">
+            <div class="p-4">
+                <h4 class="gold-text font-bold mb-2">RP Towers</h4>
+                <p class="text-sm text-gray-400">G+9 Apartment Complex, Manama</p>
+            </div>
+        </div>
+
+        <div class="card-bg rounded-lg overflow-hidden border border-zinc-800 shadow-xl">
+            <img src="https://via.placeholder.com/400x300?text=Government+Projects"
+                 alt="Government Projects"
+                 class="gallery-img w-full h-80 object-cover">
+            <div class="p-4">
+                <h4 class="gold-text font-bold mb-2">Government Projects</h4>
+                <p class="text-sm text-gray-400">Multiple Administrative Buildings</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section id="experience" class="space-y-8">
+    <h3 class="text-3xl font-bold mb-10 gold-text text-center uppercase tracking-widest">
+        Professional Journey
+    </h3>
+
+    <div class="card-bg p-8 rounded-lg border-l-4 gold-border shadow-lg">
+        <h4 class="font-bold text-xl gold-text uppercase">SR-PROJECT ENGINEER</h4>
+        <p class="text-gray-400 font-semibold uppercase">
+            SSANGYONG Engineering & Construction | 2025 - Present
+        </p>
+    </div>
+</section>
+
+</main>
+
+<footer class="bg-black py-16 text-center border-t gold-border mt-20">
+    <h3 class="font-bold text-2xl mb-2 gold-text"
+        style="font-family: 'Playfair Display', serif;">
+        Irshath Peer Mohamed
+    </h3>
+
+    <div class="flex justify-center space-x-10 mb-10 text-2xl gold-text">
+        <a href="mailto:er.irshath.md@gmail.com"><i class="fas fa-envelope"></i></a>
+        <a href="https://www.linkedin.com/in/irshath-peer-mohamed-b61971167/"><i class="fab fa-linkedin"></i></a>
+        <a href="https://www.facebook.com/irshathpeermohamed"><i class="fab fa-facebook"></i></a>
+    </div>
+
+    <p class="text-[10px] uppercase tracking-widest opacity-30">
+        © 2026 | Dubai, United Arab Emirates
+    </p>
+</footer>
 
 </body>
 </html>
